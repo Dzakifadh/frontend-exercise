@@ -5,5 +5,5 @@ This repository is all about my hello world collection in `non-javascript ui lib
 The UI Design i get it for free on the internet, the list of design you can check in link below :fire:
 
 | Design Name                                  | Author                            | Link                                                                                       |
-| -------------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------ |
+| :------------------------------------------- | :-------------------------------- | :----------------------------------------------------------------------------------------- |
 | 🎁 [Freebie] CRAPPO - Cryptocurrency Website | Rizki Mulyawan for Illiyin Studio | [dribbble.com](https://dribbble.com/shots/15067925--Freebie-CRAPPO-Cryptocurrency-Website) |
