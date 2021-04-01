@@ -1,0 +1,133 @@
+/* --------------------------------------------------------------------------
+ * Name           : Crappo - Fastest & secure platform to invest in crypto
+ * File           : style.scss
+ * Version        : 1.0.0
+ * Author         : Dzaki Fadhlurrohman
+ * Author URI     : http://dzakifadh.github.io
+ *
+ * Dzakifadh. Copyright 2021. All Rights Reserved.
+ * -------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+
+[Table of Contents]
+
+1. Customization Bootstrap SASS Variables
+2. Imported Bootstrap SASS Variables
+3. Theming SASS Variable
+4. General Setting
+5. Hamburger Menu
+-------------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------------
+1. Customization Bootstrap SASS Variables
+-------------------------------------------------------------------------- */
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1366px,
+  xxl: 1366px,
+);
+
+/* --------------------------------------------------------------------------
+2. Imported Bootstrap SASS Variables
+-------------------------------------------------------------------------- */
+
+// Configuration
+@import '../src/style/scss/functions';
+@import '../src/style/scss/variables';
+@import '../src/style/scss/mixins';
+@import '../src/style/scss/utilities';
+
+// Layout & components
+@import '../src/style/scss/root';
+@import '../src/style/scss/reboot';
+@import '../src/style/scss/type';
+@import '../src/style/scss/images';
+@import '../src/style/scss/containers';
+@import '../src/style/scss/grid';
+@import '../src/style/scss/forms';
+@import '../src/style/scss/buttons';
+@import '../src/style/scss/transitions';
+@import '../src/style/scss/dropdown';
+@import '../src/style/scss/navbar';
+@import '../src/style/scss/card';
+
+// Helpers
+@import '../src/style/scss/helpers';
+
+// Utilities
+@import '../src/style/scss/utilities/api';
+
+/* --------------------------------------------------------------------------
+3. Theming SASS Variable
+-------------------------------------------------------------------------- */
+$dark: #0d0d2b;
+
+/* --------------------------------------------------------------------------
+4. General Setting
+-------------------------------------------------------------------------- */
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: $dark;
+}
+/* --------------------------------------------------------------------------
+5. Hamburger Menu
+-------------------------------------------------------------------------- */
+.hamburger-container {
+  width: 25px;
+  height: 20px;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  span {
+    background: #323b43;
+    display: block;
+    position: absolute;
+    height: 3px;
+    transform: rotate(0deg);
+    transition: all 0.25s cubic-bezier(0.22, 0.61, 0.36, 1);
+    opacity: 1;
+    width: 100%;
+    border-radius: 25px;
+  }
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+  top: 8px;
+}
+.hamburger span:nth-child(4) {
+  top: 16px;
+}
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked + label > div > span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+#hamburger-menu:checked + label > div > span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#hamburger-menu:checked + label > div > span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#hamburger-menu:checked + label > div > span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
