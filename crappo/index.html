@@ -19,14 +19,15 @@
   <title>Crappo - Fastest & secure platform to invest in crypto</title>
   <link rel="stylesheet" href="style.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="crappo.ico" rel="shortcut icon" type="image/ico">
 </head>
 
 <body>
+  <!-- Navbar : START -->
   <nav class="navbar navbar-expand-lg">
-    <div class="container">
+    <div class="container py-5">
       <a href="#"><img src="./img/logo.svg" alt="Cryptocurrency Logo"></a>
-
       <input type="checkbox" id="hamburger-menu" />
       <label class="navbar-toggler collapsed" for="hamburger-menu" data-bs-toggle="collapse"
         data-bs-target="#navbar-crappo" aria-controls="navbar-crappo" aria-expanded="false"
@@ -41,18 +42,56 @@
       <div class="collapse navbar-collapse" id="navbar-crappo">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#">Products</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Features</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item login-register">
+            <a href="#">Login</a>
+            <a class="btn-primary text-light btn-crappo-size rounded-crappo" href="#">Register</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- Navbar : END -->
+
+  <!-- Hero : START -->
+  <section id="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <span class="d-inline-flex justify-content-between align-items-center label__outer rounded-crappo">
+            <span class="label__inner bg-light rounded-crappo me-3">
+              75% SAVE
+            </span>
+            For the Black Friday weekend
+          </span>
+          <h1 class="fw-bold lh-sm mt-4">Fastest & secure platform to invest in crypto</h1>
+          <p class="my-4 lh-lg">Buy and sell cryptocurrencies, trusted by 10M wallets<br class="">with over $30 billion
+            in
+            transactions.
+          </p>
+          <a class="d-inline-flex align-items-center justify-content-start btn-primary text-light btn-icon-crappo-size rounded-crappo fw-bold"
+            href="#">
+            <span class="me-3">Try for FREE</span>
+            <img src="./img/arrow-right.svg" alt="Arrow Right">
+          </a>
+        </div>
+        <div class="col-6">
+          <img src="./img/hero-illustration.svg" alt="Hero Illustration">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero : END -->
   <script src="/src/js/bootstrap.bundle.min.js"></script>
 </body>
 
