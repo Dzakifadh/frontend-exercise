@@ -32,9 +32,27 @@ $container-max-widths: (
 );
 
 $h1-font-size: 64px;
+$h2-font-size: 40px;
 $blue: #3671e9;
 $font-weight-bold: 600;
 $font-weight-bolder: 700;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+$new-spacers: (
+  6: $spacer * 4,
+  7: $spacer * 5,
+);
+$spacers: map-merge($spacers, $new-spacers);
+
 /* --------------------------------------------------------------------------
 2. Imported Bootstrap SASS Variables
 -------------------------------------------------------------------------- */
@@ -70,7 +88,9 @@ $font-weight-bolder: 700;
 -------------------------------------------------------------------------- */
 $dark: #0d0d2b;
 $light: #fff;
-$border-radius-crappo: 32px;
+$gray: #e0e0e0;
+$border-crappo-lg: 32px;
+$border-crappo-md: 16px;
 $default-ls: 0.01em;
 /* --------------------------------------------------------------------------
 4. General Setting
@@ -79,6 +99,7 @@ body {
   font-family: 'Rubik', sans-serif;
   background-color: $dark;
   color: $light;
+  font-weight: 400;
 }
 a {
   color: $light;
@@ -104,7 +125,7 @@ p {
   }
 }
 .rounded-crappo {
-  border-radius: $border-radius-crappo;
+  border-radius: $border-crappo-lg;
 }
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
@@ -196,4 +217,100 @@ p {
       opacity: 0.3;
     }
   }
+}
+
+/* --------------------------------------------------------------------------
+7. Why
+-------------------------------------------------------------------------- */
+.why__item {
+  .icon-wrapper {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* --------------------------------------------------------------------------
+8. Earning & Cryptocurrencies
+-------------------------------------------------------------------------- */
+.card-earning {
+  filter: drop-shadow(0px 20px 200px rgba(57, 23, 119, 0.05));
+  border-radius: $border-crappo-md;
+}
+.form-group-custom {
+  position: relative;
+  input,
+  select {
+    font-size: 14px;
+    height: 40px;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $gray;
+    color: $dark;
+    &:focus {
+      outline: none;
+    }
+  }
+  /* LABEL ======================================= */
+  label, .label-select-option {
+    color: $dark;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    line-height: 40px;
+    transition: 0.2s ease all;
+  }
+
+  /* active state */
+  input:focus ~ label,
+  input:valid ~ label,
+  select.select-material:focus ~ .label-select-option,
+  select.select-material:valid ~ .label-select-option {
+    top: -26px;
+    font-size: 12px;
+    color: $blue;
+  }
+  /* BOTTOM BARS ================================= */
+  .bar {
+    position: relative;
+    display: block;
+    width: 100%;
+  }
+  .bar:before,
+  .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    position: absolute;
+    background: $blue;
+    transition: 0.2s ease all;
+  }
+  .bar:before {
+    left: 50%;
+  }
+  .bar:after {
+    right: 50%;
+  }
+
+  /* active state */
+  input:focus ~ .bar:before,
+  input:focus ~ .bar:after,
+  select:focus ~ .bar:before,
+  select:focus ~ .bar:after {
+    width: 50%;
+  }
+
+  /* HIGHLIGHTER ================================== */
+  .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  
 }
