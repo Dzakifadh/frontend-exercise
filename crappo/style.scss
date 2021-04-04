@@ -33,6 +33,7 @@ $container-max-widths: (
 
 $h1-font-size: 64px;
 $h2-font-size: 40px;
+$h3-font-size: 32px;
 $blue: #3671e9;
 $font-weight-bold: 600;
 $font-weight-bolder: 700;
@@ -87,11 +88,14 @@ $spacers: map-merge($spacers, $new-spacers);
 3. Theming SASS Variable
 -------------------------------------------------------------------------- */
 $dark: #0d0d2b;
+$dark-soft: #2b076e;
 $light: #fff;
 $gray: #e0e0e0;
+$gray-100: #828282;
 $border-crappo-lg: 32px;
 $border-crappo-md: 16px;
 $default-ls: 0.01em;
+$letter-spacing: 0.04em;
 /* --------------------------------------------------------------------------
 4. General Setting
 -------------------------------------------------------------------------- */
@@ -100,16 +104,17 @@ body {
   background-color: $dark;
   color: $light;
   font-weight: 400;
+  letter-spacing: $letter-spacing;
 }
 a {
   color: $light;
   text-decoration: none;
 }
 .btn-crappo-size {
-  padding: 18px 32px;
+  padding: 16px 30px;
 }
 .btn-icon-crappo-size {
-  padding: 16px 16px 16px 24px;
+  padding: 14px 14px 14px 22px;
 }
 p {
   letter-spacing: $default-ls;
@@ -129,6 +134,21 @@ p {
 }
 .pointer {
   cursor: pointer;
+}
+.text-dark {
+  color: $dark;
+}
+.text-gray {
+  color: $gray-100;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fs-18 {
+  font-size: 18px;
+}
+.opacity-50 {
+  opacity: 0.5;
 }
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
@@ -235,7 +255,14 @@ p {
 8. Earning & Cryptocurrencies
 -------------------------------------------------------------------------- */
 .card-earning {
-  filter: drop-shadow(0px 20px 200px rgba(57, 23, 119, 0.05));
+  border-radius: $border-crappo-md;
+  margin-bottom: -185px;
+}
+.card-earning-shadow {
+  filter: drop-shadow(0px 20px 300px rgba(57, 23, 119, 0.1));
+  background: $light;
+  width: 858px;
+  height: 328px;
   border-radius: $border-crappo-md;
 }
 .form-group-custom {
@@ -327,5 +354,45 @@ p {
 
   .select-material {
     @extend .input-material;
+  }
+}
+
+/* --------------------------------------------------------------------------
+9. Trade Securely
+-------------------------------------------------------------------------- */
+.trade-securely {
+  background: linear-gradient(180deg, #f8f9fb 0%, #fafbff 100%);
+  padding: 320px 0 100px;
+}
+.dark-soft {
+  background: $dark-soft;
+}
+.card-coin {
+  box-shadow: 0px 40px 40px #eadfff87;
+  border-radius: $border-crappo-md;
+  padding: 50px 24px;
+  h3 {
+    span {
+      transform: translateY(-5px);
+    }
+  }
+  p {
+    line-height: 28px;
+  }
+}
+
+$gutters: (
+  2: 14px,
+  3: 7px,
+  4: 14px,
+);
+
+@each $gutter, $i in $gutters {
+  .col-card-coin {
+    &:nth-child(#{$gutter}) {
+      .card-coin {
+        margin: 0 $i;
+      }
+    }
   }
 }
