@@ -455,3 +455,21 @@ $gutters: (
     right: 10%;
   }
 }
+.features-img {
+  transform: translateX(-85px);
+}
+.features-1 {
+  margin-top: 100px;
+}
+.features-2 {
+  margin-top: 200px;
+  img {
+    width: 100%;
+  }
+}
+.features-3 {
+  margin-top: 120px;
+  img {
+    width: 100%;
+  }
+}
