@@ -34,7 +34,7 @@ $container-max-widths: (
 $blue: #3671e9;
 $cyan: #42ffff;
 
-$h1-font-size: 64px;
+$h1-font-size: 60px;
 $h2-font-size: 40px;
 $h3-font-size: 32px;
 $h4-font-size: 28px;
@@ -106,6 +106,13 @@ $letter-spacing: 0.04em;
 /* --------------------------------------------------------------------------
 4. General Setting
 -------------------------------------------------------------------------- */
+* {
+  // border: 1px solid red;
+}
+html,
+body {
+  overflow-x: hidden;
+}
 body {
   font-family: 'Rubik', sans-serif;
   background-color: $dark;
@@ -127,11 +134,11 @@ p {
   letter-spacing: $default-ls;
 }
 .label {
-  &__outer {
+  &-outer {
     background: rgba(255, 255, 255, 0.1);
     padding: 6px 20px 6px 6px;
   }
-  &__inner {
+  &-inner {
     color: $dark;
     padding: 8px 20px;
   }
@@ -156,6 +163,48 @@ p {
 }
 .opacity-50 {
   opacity: 0.5;
+}
+::-webkit-scrollbar-track {
+  background-color: $dark;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: $border-crappo-md;
+  background-color: $blue;
+  border: 2px solid $blue;
+}
+#element-1 {
+  top: -35%;
+  left: 7%;
+}
+#element-2 {
+  top: -52%;
+  left: 65%;
+}
+#element-3 {
+  top: 20%;
+  right: 0;
+}
+#element-4 {
+  bottom: 12%;
+  right: 0;
+}
+#element-5 {
+  left: -45%;
+  bottom: -25%;
+}
+#element-6 {
+  top: -26%;
+  left: 10%;
+}
+#element-7 {
+  bottom: 30%;
+  right: -30%;
+}
+.z-index-1 {
+  z-index: 1;
 }
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
@@ -254,7 +303,7 @@ p {
 /* --------------------------------------------------------------------------
 7. Why
 -------------------------------------------------------------------------- */
-.why__item {
+.why-item {
   .icon-wrapper {
     background: rgba(255, 255, 255, 0.1);
   }
@@ -416,6 +465,11 @@ $gutters: (
         }
       }
     }
+    &-chart {
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 .counter {
@@ -472,7 +526,7 @@ $gutters: (
 }
 
 /* --------------------------------------------------------------------------
-11. Features
+11. CTA & Footer
 -------------------------------------------------------------------------- */
 .cta {
   background: linear-gradient(180deg, #2b076e 0%, #0d0d2b 100%);
