@@ -243,7 +243,9 @@ p {
       height: 26px;
       width: 2px;
       background-color: #f2f2f2;
-      left: 30%;
+      left: 31.5%;
+      top: 25%;
+
       opacity: 0.3;
     }
   }
@@ -264,14 +266,9 @@ p {
 .card-earning {
   border-radius: $border-crappo-md;
   margin-bottom: -185px;
+  box-shadow: 0 20px 100px rgba(57, 23, 119, 0.1);
 }
-.card-earning-shadow {
-  filter: drop-shadow(0px 20px 300px rgba(57, 23, 119, 0.1));
-  background: $light;
-  width: 858px;
-  height: 328px;
-  border-radius: $border-crappo-md;
-}
+
 .form-group-custom {
   position: relative;
   .input-material {
@@ -287,7 +284,7 @@ p {
       outline: none;
     }
   }
-  .select-material {
+  .select-mater ial {
     @extend .input-material;
   }
 
@@ -471,5 +468,63 @@ $gutters: (
   margin-top: 120px;
   img {
     width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+11. Features
+-------------------------------------------------------------------------- */
+.cta {
+  background: linear-gradient(180deg, #2b076e 0%, #0d0d2b 100%);
+}
+.card-cta {
+  background: $blue;
+  padding: 40px;
+  border-radius: $border-crappo-md;
+  .form-group-custom {
+    width: 374px;
+    input {
+      font-size: 18px;
+    }
+    .bar {
+      &::before {
+        background: $light;
+      }
+      &::after {
+        background: $light;
+      }
+    }
+  }
+  .input-material {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    color: $light;
+    .bar-before-after {
+      background: $light;
+    }
+  }
+  img {
+    &:nth-child(1) {
+      top: 0;
+      left: 5%;
+    }
+    &:nth-child(2) {
+      bottom: 0;
+      right: 5%;
+    }
+  }
+}
+
+.crypto-cards {
+  img {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+.media-social {
+  li {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
   }
 }
