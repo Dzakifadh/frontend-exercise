@@ -106,9 +106,9 @@ $letter-spacing: 0.04em;
 /* --------------------------------------------------------------------------
 4. General Setting
 -------------------------------------------------------------------------- */
-* {
-  // border: 1px solid red;
-}
+// * {
+//   // border: 1px solid red;
+// }
 html,
 body {
   overflow-x: hidden;
@@ -175,36 +175,41 @@ p {
   background-color: $blue;
   border: 2px solid $blue;
 }
-#element-1 {
-  top: -35%;
-  left: 7%;
-}
-#element-2 {
-  top: -52%;
-  left: 65%;
-}
-#element-3 {
-  top: 20%;
-  right: 0;
-}
-#element-4 {
-  bottom: 12%;
-  right: 0;
-}
-#element-5 {
-  left: -45%;
-  bottom: -25%;
-}
-#element-6 {
-  top: -26%;
-  left: 10%;
-}
-#element-7 {
-  bottom: 30%;
-  right: -30%;
+#element {
+  &-1 {
+    top: -35%;
+    left: 7%;
+  }
+  &-2 {
+    top: -52%;
+    left: 65%;
+  }
+  &-3 {
+    top: 20%;
+    right: 0;
+  }
+  &-4 {
+    bottom: 12%;
+    right: 0;
+  }
+  &-5 {
+    left: -45%;
+    bottom: -25%;
+  }
+  &-6 {
+    top: -26%;
+    left: 10%;
+  }
+  &-7 {
+    bottom: 30%;
+    right: -30%;
+  }
 }
 .z-index-1 {
   z-index: 1;
+}
+.h-fullscreen {
+  height: 100vh;
 }
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
@@ -300,6 +305,17 @@ p {
   }
 }
 
+#shrink-navbar {
+  padding: 45px 0;
+  transition: 0.4s;
+}
+.scrolled-navbar {
+  background: $dark;
+  box-shadow: 0 -4px 15px rgb(13, 13, 43);
+}
+#hero {
+  padding-top: 1rem * 10;
+}
 /* --------------------------------------------------------------------------
 7. Why
 -------------------------------------------------------------------------- */
@@ -321,7 +337,7 @@ p {
 .form-group-custom {
   position: relative;
   .input-material {
-    font-size: 14px;
+    font-size: 18px;
     height: 40px;
     display: block;
     width: 100%;
