@@ -64,52 +64,52 @@ document.addEventListener('DOMContentLoaded', () => {
     delay: 1e3,
     opacity: [0, 1],
   })
-  var n = document.querySelector('.h1-anim')
-  ;(n.innerHTML = n.textContent.replace(
+  var textWrapper = document.querySelector('.h1-anim')
+  textWrapper.innerHTML = textWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
-  )),
-    anime
-      .timeline()
-      .add({
-        targets: '.h1-anim .letter',
-        translateX: [-100, 0],
-        translateZ: 0,
-        opacity: [0, 1],
+  )
+  anime
+    .timeline()
+    .add({
+      targets: '.h1-anim .letter',
+      translateX: [-100, 0],
+      translateZ: 0,
+      opacity: [0, 1],
+      easing: 'spring(1, 40, 10, 0)',
+      duration: 1400,
+      delay: (e, t) => 300 + 30 * t,
+    })
+    .add(
+      {
+        targets: 'img.hero-img',
+        translateX: [100, 0],
         easing: 'spring(1, 40, 10, 0)',
+        opacity: [0, 1],
         duration: 1400,
-        delay: (e, t) => 300 + 30 * t,
-      })
-      .add(
-        {
-          targets: 'img.hero-img',
-          translateX: [100, 0],
-          easing: 'spring(1, 40, 10, 0)',
-          opacity: [0, 1],
-          duration: 1400,
-        },
-        '-=2000'
-      )
-      .add(
-        {
-          targets: '.hero-desc',
-          translateY: [100, 0],
-          easing: 'spring(1, 40, 10, 0)',
-          opacity: [0, 1],
-          duration: 1400,
-        },
-        '-=2000'
-      )
-      .add(
-        {
-          targets: '.hero-btn',
-          translateY: [100, 0],
-          easing: 'spring(1, 40, 10, 0)',
-          opacity: [0, 1],
-          duration: 1400,
-        },
-        '-=1800'
-      ),
+      },
+      '-=2000'
+    )
+    .add(
+      {
+        targets: '.hero-desc',
+        translateY: [100, 0],
+        easing: 'spring(1, 40, 10, 0)',
+        opacity: [0, 1],
+        duration: 1400,
+      },
+      '-=2000'
+    )
+    .add(
+      {
+        targets: '.hero-btn',
+        translateY: [100, 0],
+        easing: 'spring(1, 40, 10, 0)',
+        opacity: [0, 1],
+        duration: 1400,
+      },
+      '-=1800'
+    ),
     (window.onscroll = (e) => {
       document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
         ? ((document.getElementById('shrink-navbar').style.padding = '25px 0'),
