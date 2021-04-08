@@ -219,6 +219,9 @@ p {
 .translateY-40 {
   transform: translateY(-40px);
 }
+.opacity-0 {
+  opacity: 0;
+}
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
 -------------------------------------------------------------------------- */
@@ -606,4 +609,8 @@ $gutters: (
       margin-right: 32px;
     }
   }
+}
+.footer-anim,
+.footer-anim-bottom {
+  opacity: 0;
 }

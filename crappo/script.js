@@ -8,6 +8,7 @@ function runAnimtion() {
     opacity: [0, 1],
   })
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   anime({
     targets: '#navbar-crappo li',
@@ -17,24 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
     duration: 2e3,
     delay: (e, t) => 0 + 150 * t,
     opacity: [0, 1],
-  }),
-    anime({
-      targets: '#logo',
-      translateX: [-100, 0],
-      easing: 'easeOutExpo',
-      delay: 0,
-      duration: 2500,
-      opacity: [0, 1],
-    }),
-    anime({
-      targets: '.label-outer',
-      translateY: [-50, 0],
-      easing: 'spring(1, 40, 10, 0)',
-      duration: 7e3,
-      opacity: [0, 1],
-    })
-  const e = document.querySelector('#percentage'),
-    t = { counter: '0%' }
+  })
+  anime({
+    targets: '#logo',
+    translateX: [-100, 0],
+    easing: 'easeOutExpo',
+    delay: 0,
+    duration: 2500,
+    opacity: [0, 1],
+  })
+  anime({
+    targets: '.label-outer',
+    translateY: [-50, 0],
+    easing: 'spring(1, 40, 10, 0)',
+    duration: 7e3,
+    opacity: [0, 1],
+  })
+  const e = document.querySelector('#percentage')
+  t = {
+    counter: '0%',
+  }
   anime({
     targets: t,
     counter: '75%',
@@ -44,23 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
     update: function () {
       e.innerHTML = JSON.stringify(t.counter).slice(1, -1)
     },
-  }),
-    anime({
-      targets: 'span#save',
-      translateX: [-100, 0],
-      easing: 'spring(1, 40, 10, 0)',
-      duration: 5e3,
-      delay: 500,
-      opacity: [0, 1],
-    }),
-    anime({
-      targets: 'span#discount-title',
-      translateX: [-200, 0],
-      easing: 'spring(1, 40, 10, 0)',
-      duration: 5e3,
-      delay: 1e3,
-      opacity: [0, 1],
-    })
+  })
+  anime({
+    targets: 'span#save',
+    translateX: [-100, 0],
+    easing: 'spring(1, 40, 10, 0)',
+    duration: 5e3,
+    delay: 500,
+    opacity: [0, 1],
+  })
+  anime({
+    targets: 'span#discount-title',
+    translateX: [-200, 0],
+    easing: 'spring(1, 40, 10, 0)',
+    duration: 5e3,
+    delay: 1e3,
+    opacity: [0, 1],
+  })
   var n = document.querySelector('.h1-anim')
   ;(n.innerHTML = n.textContent.replace(
     /\S/g,
@@ -132,7 +135,11 @@ var whySection = new Waypoint({
     })
 
     const e = document.querySelectorAll('.why-item h2')
-    t = { chart: '$0B', person: '0M+', globe: 0 }
+    t = {
+      chart: '$0B',
+      person: '0M+',
+      globe: 0,
+    }
     anime({
       targets: t,
       chart: '$30B',
@@ -396,7 +403,7 @@ var footerSection = new Waypoint({
   handler: () => {
     anime({
       targets: '#footer .footer-anim',
-      translateY: [200, 0],
+      translateX: [50, 0],
       easing: 'spring(1, 40, 10, 0)',
       opacity: [0, 1],
       duration: 200,
