@@ -137,6 +137,7 @@ p {
   &-outer {
     background: rgba(255, 255, 255, 0.1);
     padding: 6px 20px 6px 6px;
+    overflow: hidden;
   }
   &-inner {
     color: $dark;
@@ -210,6 +211,13 @@ p {
 }
 .h-fullscreen {
   height: 100vh;
+}
+#percentage {
+  width: 36px;
+  display: inline-block;
+}
+.translateY-40 {
+  transform: translateY(-40px);
 }
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
@@ -523,7 +531,7 @@ $gutters: (
   }
 }
 .features-img {
-  transform: translateX(-85px);
+  transform: translateX(-90px);
 }
 .features-1 {
   margin-top: 100px;
@@ -551,6 +559,7 @@ $gutters: (
   background: $blue;
   padding: 40px;
   border-radius: $border-crappo-md;
+  overflow-y: hidden;
   .form-group-custom {
     width: 374px;
     input {

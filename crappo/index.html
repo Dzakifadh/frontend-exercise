@@ -18,9 +18,9 @@
   <!-- Meta : END -->
   <title>Crappo - Fastest & secure platform to invest in crypto</title>
   <link rel="stylesheet" href="style.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
   <link href="crappo.ico" rel="shortcut icon" type="image/ico">
 </head>
 
@@ -28,7 +28,7 @@
   <!-- Navbar : START -->
   <nav id="shrink-navbar" class="navbar fixed-top navbar-expand-lg navbar-crappo">
     <div class="container">
-      <a href="#"><img src="./img/logo.svg" alt="Cryptocurrency Logo"></a>
+      <a id="logo" href="#"><img src="./img/logo.svg" alt="Cryptocurrency Logo"></a>
       <input type="checkbox" id="hamburger-menu" />
       <label class="navbar-toggler collapsed" for="hamburger-menu" data-bs-toggle="collapse"
         data-bs-target="#navbar-crappo" aria-controls="navbar-crappo" aria-expanded="false"
@@ -71,24 +71,25 @@
         <div class="col-6">
           <span class="d-inline-flex justify-content-between align-items-center label-outer rounded-crappo fw-bold">
             <span class="label-inner bg-light rounded-crappo fw-bold me-3">
-              75% SAVE
+              <span id="percentage"></span>
+              <span id="save" class="d-inline-block">SAVE</span>
             </span>
-            For the Black Friday weekend
+            <span id="discount-title">For the Black Friday weekend</span>
           </span>
-          <h1 class="fw-bold lh-sm mt-4">Fastest & secure platform to invest in crypto</h1>
-          <p class="lh-lg mt-4 mb-4 fs-18">Buy and sell cryptocurrencies, trusted by 10M wallets<br class="">with over
-            $30 billion
-            in
-            transactions.
+          <h1 class="d-inline-block fw-bold lh-sm mt-4 h1-anim">Fastest & secure platform to invest in crypto</h1>
+          <p class="lh-lg mt-4 mb-4 fs-18 hero-desc">
+            Buy and sell cryptocurrencies, trusted by 10M wallets<br />with over $30 billion in transactions.
           </p>
-          <a class="d-inline-flex align-items-center justify-content-start btn btn-primary text-light btn-icon-crappo-size rounded-crappo fw-bold"
+          <a class="d-inline-flex hero-btn align-items-center justify-content-start btn btn-primary text-light btn-icon-crappo-size rounded-crappo fw-bold"
             href="#">
             <span class="me-3">Try for FREE</span>
             <img src="./img/arrow-right.svg" alt="Arrow Right">
           </a>
         </div>
         <div class="col-6">
-          <img src="./img/hero-illustration.svg" alt="Hero Illustration">
+          <div class="translateY-40">
+            <img class="hero-img hero-img-anim" src="./img/hero-illustration.svg" alt="Hero Illustration">
+          </div>
         </div>
       </div>
     </div>
@@ -103,15 +104,15 @@
     <img id="element-4" class="position-absolute" src="./img/element-3.svg" alt="Element 4">
     <img id="element-5" class="position-absolute" src="./img/element-1.svg" alt="Element 5">
     <div class="container">
-      <div class="row my-5">
+      <div class="row mb-5">
         <div class="col-md-4">
           <div class="why-item d-flex justify-content-start align-items-center">
             <div class="icon-wrapper p-3 rounded-circle">
               <img src="./img/chart-bar.svg" alt="Chart Bar">
             </div>
             <div class="ms-3">
-              <h2 class="fw-bold mb-2">$30B</h2>
-              <span>Digital Currency Exchanged</span>
+              <h2 class="fw-bold mb-2">$0B</h2>
+              <span class="d-block">Digital Currency Exchanged</span>
             </div>
           </div>
         </div>
@@ -121,8 +122,8 @@
               <img src="./img/person.svg" alt="Chart Bar">
             </div>
             <div class="ms-3">
-              <h2 class="fw-bold mb-2">10M+</h2>
-              <span>Trusted Wallets Investor</span>
+              <h2 class="fw-bold mb-2">0M+</h2>
+              <span class="d-block">Trusted Wallets Investor</span>
             </div>
           </div>
         </div>
@@ -132,25 +133,27 @@
               <img src="./img/globe.svg" alt="Chart Bar">
             </div>
             <div class="ms-3">
-              <h2 class="fw-bold mb-2">195</h2>
-              <span>Countries Supported</span>
+              <h2 class="fw-bold mb-2">0</h2>
+              <span class="d-block">Countries Supported</span>
             </div>
           </div>
         </div>
       </div>
-      <div class="row align-items-center my-5">
+      <div id="choose-crappo" class="row align-items-center my-5">
         <div class="col-md-6">
           <img src="./img/why-illustrations.svg" alt="Why Illustrations">
         </div>
         <div class="col-md-6">
           <div class="ms-7">
-            <h2 class="fw-bold lh-base">Why you should choose CRAPPO</h2>
-            <p class="lh-lg mt-4 mb-4 fs-18">Experience the next generation cryptocurrency platform.<br>No financial
+            <h2 class="fw-bold lh-base choose-crappo">Why you should choose CRAPPO</h2>
+            <p class="lh-lg mt-4 mb-4 fs-18 choose-crappo">Experience the next generation cryptocurrency platform.<br>No
+              financial
               borders,
               extra
               fees,
               and fake reviews.</p>
-            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold" href="#">Learn
+            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold choose-crappo"
+              href="#">Learn
               More</a>
           </div>
         </div>
@@ -163,8 +166,8 @@
   <section id="earning">
     <div class="container">
       <div class="text-center">
-        <h2 class="fw-bolder lh-base">Check how much you can earn</h2>
-        <p class="lh-lg mt-3 mb-6 fs-18">Let’s check your hash rate to see how much you will earn today,
+        <h2 class="fw-bolder lh-base earning-crappo">Check how much you can earn</h2>
+        <p class="lh-lg mt-3 mb-6 fs-18 earning-crappo">Let’s check your hash rate to see how much you will earn today,
           <br />Exercitation veniam
           consequat sunt nostrud
           amet.
@@ -172,7 +175,7 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-md-9">
-          <div class="card card-earning border-0 p-5">
+          <div class="card card-earning border-0 p-5 earning-crappo">
             <form action="" method="post" autocomplete="off">
               <div class="row align-items-center">
                 <div class="col-md-6">
@@ -219,7 +222,7 @@
       </div>
       <div class="row">
         <div class="col-md-4 col-card-coin">
-          <div class="card border-0 card-coin dark-soft text-center">
+          <div class="card border-0 card-coin card-coin-start dark-soft text-center">
             <img src="./img/logos_bitcoin.svg" alt="Bitcoin Logo" class="mx-auto mb-5" width="80px">
             <h3 class="mb-3 fw-bolder">Bitcoin <span class="d-inline-block fw-bold ms-1 fs-18 opacity-50">BTC</span>
             </h3>
@@ -232,7 +235,7 @@
           </div>
         </div>
         <div class="col-md-4 col-card-coin">
-          <div class="card border-0 card-coin text-center">
+          <div class="card border-0 card-coin card-coin-center text-center">
             <img src="./img/logos_ethereum.svg" alt="Ethereum Logo" class="mx-auto mb-5" width="80px">
             <h3 class="text-dark mb-3 fw-bolder">Ethereum <span
                 class="d-inline-block fw-bold ms-1 fs-18 opacity-50">ETH</span></h3>
@@ -243,7 +246,7 @@
           </div>
         </div>
         <div class="col-md-4 col-card-coin">
-          <div class="card border-0 card-coin text-center">
+          <div class="card border-0 card-coin card-coin-end text-center">
             <img src="./img/logos_litecoin.svg" alt="Litecoin Logo" class="mx-auto mb-5" width="80px">
             <h3 class="text-dark mb-3 fw-bolder">Litecoin <span
                 class="d-inline-block fw-bold ms-1 fs-18 opacity-50">LTC</span></h3>
@@ -259,7 +262,7 @@
   <!-- Trade Securely : END -->
 
   <!-- Features : START -->
-  <section class="features dark-soft py-7 position-relative overflow-hidden">
+  <section id="features" class="features dark-soft py-7 position-relative overflow-hidden">
     <img id="element-6" class="position-absolute" src="./img/element-4.svg" alt="Element 6">
     <div class="container">
       <div class="text-center">
@@ -269,16 +272,18 @@
       <div class="features-1">
         <div class="row align-items-center">
           <div class="col-md-6">
-            <h3 class="mb-2 fw-bolder lh-base">Invest Smart</h3>
-            <p class="lh-lg fs-18 mt-1 mb-4">Get full statistic information about the behaviour<br>of buyers and sellers
+            <h3 class="mb-2 fw-bolder lh-base invest-smart-crappo">Invest Smart</h3>
+            <p class="lh-lg fs-18 mt-1 mb-4 invest-smart-crappo">Get full statistic information about the
+              behaviour<br>of buyers and sellers
               will
               help you to
               make the decision. </p>
-            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold" href="#">Learn
+            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold invest-smart-crappo"
+              href="#">Learn
               More</a>
           </div>
           <div class="col-md-6">
-            <div class="position-relative">
+            <!-- <div class="position-relative">
               <div class="card b-0 card-features">
                 <div class="crypto-data d-flex justify-content-between align-items-center">
                   <div class="d-flex justify-content-between align-items-start">
@@ -308,7 +313,8 @@
                 <h4 class="fw-bolder">$15.32</h4>
                 <span class="fw-500">Price in dollar</span>
               </div>
-            </div>
+            </div> -->
+            <img src="./img/invest-smart.svg" alt="Invest Smart Illustration">
           </div>
         </div>
       </div>
@@ -319,11 +325,13 @@
             <img class="features-img" src="./img/detailed-statistic-2.svg" alt="Body Detailded Features">
           </div>
           <div class="col-md-5">
-            <h3 class="mb-2 fw-bolder lh-base">Detailed Statistics</h3>
-            <p class="lh-lg fs-18 mt-1 mb-4">View all mining related information in realtime, at any point at any
+            <h3 class="mb-2 fw-bolder lh-base detailed-statistic">Detailed Statistics</h3>
+            <p class="lh-lg fs-18 mt-1 mb-4 detailed-statistic">View all mining related information in realtime, at any
+              point at any
               location
               and decide which polls you want to mine in.</p>
-            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold" href="#">Learn
+            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold detailed-statistic"
+              href="#">Learn
               More</a>
           </div>
         </div>
@@ -331,10 +339,12 @@
       <div class="features-3">
         <div class="row align-items-center">
           <div class="col-md-5">
-            <h3 class="mb-3 fw-bolder lh-base">Grow your profit and track your investments</h3>
-            <p class="lh-lg fs-18 mt-1 mb-4">Use advanced analytical tools. Clear TradingView<br>charts let you track
+            <h3 class="mb-3 fw-bolder lh-base grow-profit">Grow your profit and track your investments</h3>
+            <p class="lh-lg fs-18 mt-1 mb-4 grow-profit">Use advanced analytical tools. Clear TradingView<br>charts let
+              you track
               current and historical profit<br>investments.</p>
-            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold" href="#">Learn
+            <a class="d-inline-flex btn-primary text-light btn-crappo-size rounded-crappo fw-bold grow-profit"
+              href="#">Learn
               More</a>
           </div>
           <div class="col-md-7">
@@ -347,7 +357,7 @@
   <!-- Features : END -->
 
   <!-- Call To Action : START -->
-  <section class="cta py-7 position-relative">
+  <section id="cta" class="cta py-7 position-relative">
     <img id="element-7" class="position-absolute" src="./img/element-4.svg" alt="Element 7">
     <div class="container">
       <div class="card card-cta border-0">
@@ -355,7 +365,7 @@
         <img class="position-absolute" src="./img/btc-lg-icon.svg" alt="Bitcoin Large Logo">
         <div class="d-flex justify-content-between align-items-center">
           <div>
-            <h2 class=" fw-bolder lh-base">Start mining now</h2>
+            <h2 class="fw-bolder lh-base">Start mining now</h2>
             <p class="fs-18 mt-1">Join now with CRAPPO to get the latest news<br>and start mining now</p>
           </div>
           <form action="" method="post" autocomplete="off" class="d-flex align-items-center">
@@ -374,50 +384,50 @@
   <!-- Call To Action : END -->
 
   <!-- Footer : START -->
-  <footer class="footer pt-5">
+  <footer id="footer" class="footer pt-5">
     <div class="container">
       <div class="row">
         <div class="col-md-2">
-          <img src="./img/logo.svg" alt="Crappo Logo">
+          <img class="footer-anim" src="./img/logo.svg" alt="Crappo Logo">
         </div>
         <div class="col-md-3">
           <div class="ms-5">
-            <h5 class="mb-4">Quick Link</h5>
+            <h5 class="mb-4 footer-anim">Quick Link</h5>
             <ul class="list-unstyled">
-              <li class="mt-3"><a href="#">Home</a></li>
-              <li class="mt-3"><a href="#">Products</a></li>
-              <li class="mt-3"><a href="#">About</a></li>
-              <li class="mt-3"><a href="#">Features</a></li>
-              <li class="mt-3"><a href="#">Contact</a></li>
+              <li class="mt-3 footer-anim"><a href="#">Home</a></li>
+              <li class="mt-3 footer-anim"><a href="#">Products</a></li>
+              <li class="mt-3 footer-anim"><a href="#">About</a></li>
+              <li class="mt-3 footer-anim"><a href="#">Features</a></li>
+              <li class="mt-3 footer-anim"><a href="#">Contact</a></li>
             </ul>
           </div>
         </div>
         <div class="col-md-3">
-          <h5 class="mb-4">Resources</h5>
+          <h5 class="mb-4 footer-anim">Resources</h5>
           <ul class="list-unstyled">
-            <li class="mt-3"><a href="#">Download Whitepapper</a></li>
-            <li class="mt-3"><a href="#">Smart Token</a></li>
-            <li class="mt-3"><a href="#">Blockchain Explorer</a></li>
-            <li class="mt-3"><a href="#">Crypto API</a></li>
-            <li class="mt-3"><a href="#">Interest</a></li>
+            <li class="mt-3 footer-anim"><a href="#">Download Whitepapper</a></li>
+            <li class="mt-3 footer-anim"><a href="#">Smart Token</a></li>
+            <li class="mt-3 footer-anim"><a href="#">Blockchain Explorer</a></li>
+            <li class="mt-3 footer-anim"><a href="#">Crypto API</a></li>
+            <li class="mt-3 footer-anim"><a href="#">Interest</a></li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h3 class="lh-base">We accept following payment systems</h3>
+          <h3 class="lh-base footer-anim ">We accept following payment systems</h3>
           <div class="crypto-cards mt-5">
-            <img src="./img/visa-card.svg" alt="Visa Card">
-            <img src="./img/mastercard-card.svg" alt="Mastercard Card">
-            <img src="./img/bitcoin-card.svg" alt="Bitcoin Card">
+            <img class="footer-anim" src="./img/visa-card.svg" alt="Visa Card">
+            <img class="footer-anim" src="./img/mastercard-card.svg" alt="Mastercard Card">
+            <img class="footer-anim" src="./img/bitcoin-card.svg" alt="Bitcoin Card">
           </div>
         </div>
         <div class="d-flex justify-content-between align-items-center pt-7 pb-4">
-          <span>©2021 CRAPPO. All rights reserved</span>
+          <span class="footer-anim-bottom">©2021 CRAPPO. All rights reserved</span>
           <ul class="list-unstyled d-inline-flex media-social">
-            <li><a href="#"><img src="./img/facebook.svg" alt="Facebook Icon"></a></li>
-            <li><a href="#"><img src="./img/instagram.svg" alt="Instagram Icon"></a></li>
-            <li><a href="#"><img src="./img/youtube.svg" alt="Youtube Icon"></a></li>
-            <li><a href="#"><img src="./img/twitter.svg" alt="Twitter Icon"></a></li>
-            <li><a href="#"><img src="./img/linkedin.svg" alt="Linkedin Icon"></a></li>
+            <li class="footer-anim-bottom"><a href="#"><img src="./img/facebook.svg" alt="Facebook Icon"></a></li>
+            <li class="footer-anim-bottom"><a href="#"><img src="./img/instagram.svg" alt="Instagram Icon"></a></li>
+            <li class="footer-anim-bottom"><a href="#"><img src="./img/youtube.svg" alt="Youtube Icon"></a></li>
+            <li class="footer-anim-bottom"><a href="#"><img src="./img/twitter.svg" alt="Twitter Icon"></a></li>
+            <li class="footer-anim-bottom"><a href="#"><img src="./img/linkedin.svg" alt="Linkedin Icon"></a></li>
           </ul>
         </div>
       </div>
@@ -427,19 +437,10 @@
 
   <!-- Earning &  Cryptocurrencies : END -->
   <script src="/src/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("shrink-navbar").style.padding = "25px 0";
-        document.getElementById("shrink-navbar").classList.add('scrolled-navbar')
-      } else {
-        document.getElementById("shrink-navbar").style.padding = "45px 0";
-        document.getElementById("shrink-navbar").classList.remove('scrolled-navbar')
-      }
-    }
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/waypoints@4.0.1/lib/noframework.waypoints.min.js"
+    integrity="sha256-QmVsWlNDCUJrPFRSsHxAE98pFl51TjblHXJK2WK+vB8=" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
