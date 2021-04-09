@@ -31,21 +31,21 @@ document.addEventListener('DOMContentLoaded', () => {
     targets: '.label-outer',
     translateY: [-50, 0],
     easing: 'spring(1, 40, 10, 0)',
-    duration: 7e3,
+    duration: 2500,
     opacity: [0, 1],
   })
-  const e = document.querySelector('#percentage')
-  t = {
+  const percentage = document.querySelector('#percentage')
+  discount = {
     counter: '0%',
   }
   anime({
-    targets: t,
+    targets: discount,
     counter: '75%',
     round: 1,
     easing: 'linear',
     duration: 2500,
     update: function () {
-      e.innerHTML = JSON.stringify(t.counter).slice(1, -1)
+      percentage.innerHTML = JSON.stringify(discount.counter).slice(1, -1)
     },
   })
   anime({
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     )
     .add(
       {
-        targets: '.hero-btn',
+        targets: '#hero .btn-crappo-icon',
         translateY: [100, 0],
         easing: 'spring(1, 40, 10, 0)',
         opacity: [0, 1],

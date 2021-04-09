@@ -74,15 +74,11 @@ $spacers: map-merge($spacers, $new-spacers);
 @import '../src/style/scss/root';
 @import '../src/style/scss/reboot';
 @import '../src/style/scss/type';
-@import '../src/style/scss/images';
 @import '../src/style/scss/containers';
 @import '../src/style/scss/grid';
 @import '../src/style/scss/forms';
 @import '../src/style/scss/buttons';
-@import '../src/style/scss/transitions';
-@import '../src/style/scss/dropdown';
 @import '../src/style/scss/navbar';
-@import '../src/style/scss/card';
 
 // Helpers
 @import '../src/style/scss/helpers';
@@ -222,50 +218,124 @@ p {
 .opacity-0 {
   opacity: 0;
 }
-.blob {
-  content: '';
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  top: 40%;
-  right: 12%;
-  z-index: 0;
-  background: $light;
-  transition: all 0.6s cubic-bezier(1, 0.06, 0.05, 1.03);
-}
 
-#try-free-shadow {
-  top: -20px;
-  left: 12%;
-  color: $blue;
-  transition: all 0.8s cubic-bezier(1, 0.06, 0.05, 1.03);
-}
-#try-free {
-  transform: translateY(0);
-  transition: all 0.8s cubic-bezier(1, 0.06, 0.05, 1.03);
-}
-.hero-btn {
+@mixin smooth-effect($outline: false) {
+  @if $outline {
+    border-color: $blue;
+    border-width: 2px;
+  } @else {
+    border-color: $light;
+  }
+
+  background-color: $light;
+  transition-delay: 0.3s;
+
+  .blob {
+    transform: scale(60);
+  }
+  .btn-text-shadow {
+    top: 30%;
+    z-index: 1;
+  }
+  .btn-text {
+    transform: translateY(40px);
+  }
   img {
     transition: all 0.6s ease;
   }
+}
+
+@mixin btn-outline {
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  top: -20px;
+  color: $blue;
+  transition: all 0.8s cubic-bezier(1, 0.06, 0.05, 1.03);
+}
+@mixin is-blue-boob($param: false) {
+  @if $param {
+    background-color: $blue;
+  } @else {
+    background: $light;
+  }
+}
+.blob {
+  @include is-blue-boob();
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  z-index: 0;
+  transition: all 0.6s cubic-bezier(1, 0.06, 0.05, 1.03);
+}
+.blob {
+  &-icon {
+    @extend .blob;
+    width: 10px;
+    height: 10px;
+    top: 40%;
+    right: 12%;
+  }
+  &-default {
+    @extend .blob;
+    width: 10px;
+    height: 10px;
+    top: -2%;
+    left: -2%;
+  }
+}
+
+.btn-text {
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(1, 0.06, 0.05, 1.03);
+}
+.btn-crappo-icon {
+  .btn-text-shadow {
+    top: -20px;
+    left: 12%;
+    z-index: 1;
+    color: $blue;
+    transition: all 0.8s cubic-bezier(1, 0.06, 0.05, 1.03);
+  }
   &:hover,
   &:focus {
-    .blob {
-      transform: scale(35);
-    }
+    @include smooth-effect($outline: false);
     img {
       transform: scale(1.5);
     }
-    #try-free-shadow {
-      top: 30%;
-      z-index: 1;
-    }
-    #try-free {
-      transform: translateY(40px);
-    }
   }
 }
+.btn-crappo {
+  .btn-text-shadow {
+    @include btn-outline();
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    @include smooth-effect($outline: false);
+  }
+}
+
+.btn-crappo-outline {
+  .btn-text-shadow {
+    @include btn-outline();
+    z-index: 1;
+  }
+
+  &:hover,
+  &:focus {
+    @include smooth-effect($outline: true);
+  }
+}
+input:-webkit-autofill-selected {
+  background-color: transparent;
+}
+input:-webkit-text-fill-color {
+  background-color: transparent;
+}
+
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
 -------------------------------------------------------------------------- */
@@ -387,6 +457,7 @@ p {
   border-radius: $border-crappo-md;
   margin-bottom: -185px;
   box-shadow: 0 20px 100px rgba(57, 23, 119, 0.1);
+  background: $light;
 }
 
 .form-group-custom {
@@ -584,7 +655,7 @@ $gutters: (
   margin-top: 100px;
 }
 .features-2 {
-  margin-top: 200px;
+  margin-top: 80px;
   img {
     width: 100%;
   }
