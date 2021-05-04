@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     translateY: [-50, 0],
     easing: 'easeOutExpo',
     delay: 0,
-    duration: 2e3,
+    duration: 2500,
     delay: (e, t) => 0 + 150 * t,
     opacity: [0, 1],
   })
@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1400,
       },
       '-=1800'
-    ),
+    )(
     (window.onscroll = (e) => {
       document.body.scrollTop > 100 || document.documentElement.scrollTop > 100
         ? ((document.getElementById('shrink-navbar').style.padding = '25px 0'),
@@ -121,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .getElementById('shrink-navbar')
             .classList.remove('scrolled-navbar'))
     })
+  )
 })
 var whySection = new Waypoint({
   element: document.getElementById('why'),

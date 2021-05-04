@@ -17,6 +17,12 @@
 3. Theming SASS Variable
 4. General Setting
 5. Hamburger Menu
+6. Menu Navbar
+7. Why
+8. Earning & Cryptocurrencies
+9. Trade Securely
+10. Features
+11. CTA & Footer
 -------------------------------------------------------------------------- */
 
 /* --------------------------------------------------------------------------
@@ -318,23 +324,17 @@ p {
   }
 }
 
-.btn-crappo-outline {
-  .btn-text-shadow {
-    @include btn-outline();
-    z-index: 1;
-  }
+// .btn-crappo-outline {
+//   .btn-text-shadow {
+//     @include btn-outline();
+//     z-index: 1;
+//   }
 
-  &:hover,
-  &:focus {
-    @include smooth-effect($outline: true);
-  }
-}
-input:-webkit-autofill-selected {
-  background-color: transparent;
-}
-input:-webkit-text-fill-color {
-  background-color: transparent;
-}
+//   &:hover,
+//   &:focus {
+//     @include smooth-effect($outline: true);
+//   }
+// }
 
 /* --------------------------------------------------------------------------
 5. Hamburger Menu
